@@ -1,7 +1,7 @@
 function Hero() {
-  return <section>
-    
-  </section>;
+  return (
+    <section className="relative min-h-screen flex items-center overflow-hidden"></section>
+  );
 }
 
 export default Hero;

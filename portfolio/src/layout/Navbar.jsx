@@ -49,7 +49,7 @@ function Navbar() {
             {navLink.map((link) => {
               return (
                 <a
-                  key={link.label}
+                  key={link.id}
                   href={link.href}
                   className="text-lg text-muted-foreground hover:text-foreground py-2"
                 >
@@ -57,7 +57,6 @@ function Navbar() {
                 </a>
               );
             })}
-
             <Button>Contact Me</Button>
           </div>
         </div>
