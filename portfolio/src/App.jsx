@@ -1,9 +1,23 @@
-import "./App.css";
+import Navbar from "./layout/Navbar.jsx"
+import Hero from "./sections/Hero.jsx";
+import About from "./sections/About.jsx";
+import Experience from "./sections/Experience.jsx";
+import Projects from "./sections/Projects.jsx";
+import Testimonials from "./sections/Testimonials.jsx";
+import Contact from "./sections/Contact.jsx";
 
 function App() {
   return (
-    <div>
-      <h1>Hello World</h1>
+    <div className="min-h-screen overflow-x-hidden">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Testimonials />
+        <Contact />
+      </main>
     </div>
   );
 }
