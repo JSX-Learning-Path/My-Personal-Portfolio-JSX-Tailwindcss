@@ -7,7 +7,7 @@ import { useState } from "react";
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <header className="fixed top-0 left-0  right-0 bg-transparent py-5">
+    <header className="fixed top-0 left-0  right-0 bg-transparent py-5 z-10">
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <a
           href="#"
@@ -37,7 +37,7 @@ function Navbar() {
         </div>
         {/*Mobile Menu BTN*/}
         <button
-          className="md:hidden p-2 text-foreground cursor-pointer "
+          className="md:hidden p-2 text-foreground cursor-pointer"
           onClick={() => setIsMobileMenuOpen((prev) => !prev)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -49,7 +49,7 @@ function Navbar() {
             {navLink.map((link) => {
               return (
                 <a
-                  key={link.id}
+                  key={link.label}
                   href={link.href}
                   className="text-lg text-muted-foreground hover:text-foreground py-2"
                 >
