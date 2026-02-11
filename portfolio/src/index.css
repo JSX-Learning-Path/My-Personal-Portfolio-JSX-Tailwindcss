@@ -97,6 +97,14 @@
       transform: translate(10px, 20px);
     }
   }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
   .animate-fade-in {
     animation: fade-in 0.9s ease-out both;
   }
@@ -112,4 +120,7 @@
 }
 .animation-delay-300 {
   animation-delay: 300ms;
+}
+.animation-marquee {
+  animation: marquee 30s linear infinite;
 }

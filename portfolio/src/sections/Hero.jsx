@@ -2,6 +2,7 @@ import hero from "../assets/hero.png";
 import Button from "../components/Button";
 import { ArrowRight, Download, Github, Linkedin } from "lucide-react";
 import profileImage from "../assets/profile-picture-1.png";
+import skills from "../data/skills";
 
 function Hero() {
   return (
@@ -11,7 +12,7 @@ function Hero() {
         <img
           src={hero}
           alt="Hero Background"
-          className="w-full h-screen object-cover opacity-40"
+          className="w-full min-h-screen object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background/100" />
       </div>
@@ -53,7 +54,11 @@ function Hero() {
                   Developer
                 </span>{" "}
                 with experience in building modern web applications using{" "}
-                <span className="italic text-amber-200">React</span>.
+                <span className="italic text-amber-200">React</span>. I enjoy
+                working with{" "}
+                <span className="italic text-amber-200">React</span> and
+                continuously improving my skills in JavaScript and frontend
+                development.
               </p>
             </div>
             {/* Call to Action Buttons */}
@@ -99,6 +104,23 @@ function Hero() {
                 alt="Profile Image"
                 className="w-100 h-120 m-2 object-cover  rounded animate-fade-in animation-delay-700 "
               />
+            </div>
+          </div>
+        </div>
+        {/* Skills */}
+        <div className="mt-20 animate-fade-in animation-delay-600">
+          <p className=" text-sm text-muted-foreground mb-6 text-center">
+            Technologies I work with
+          </p>
+          <div className="relative overflow-hidden">
+            <div className="flex animation-marquee">
+              {[...skills, ...skills].map((skill, idx) => (
+                <div key={idx} className="flex-shrink-0 px-8 py-4">
+                  <span className="text-xl font-serif text-muted-foreground/50 hover:text-muted-foreground transition-colors">
+                    {skill}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
