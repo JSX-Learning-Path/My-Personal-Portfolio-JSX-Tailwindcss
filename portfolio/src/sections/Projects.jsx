@@ -10,7 +10,7 @@ function Projects() {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header  */}
         <div className="text-center mx-auto max-w-3xl mb-16">
-          <h2 className="text-4xl  md:text-5xl font-bold mt-4 mb-6 animation-delay-100 text-primary ">
+          <h2 className="text-4xl  md:text-5xl font-bold mt-4 mb-6 animation-delay-10 text-foreground-primary glow-text">
             Projects that I Made
           </h2>
           <p className="text-muted-foreground">
