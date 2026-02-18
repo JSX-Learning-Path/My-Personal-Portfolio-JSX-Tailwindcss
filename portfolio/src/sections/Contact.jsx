@@ -1,6 +1,55 @@
+import { useState } from "react";
 import { Send } from "lucide-react";
 import Button from "../components/Button";
+import emailJs from "@emailjs/browser";
+import {}
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({
+    type: null,
+    message: "",
+  });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setSubmitStatus({ type: null, message: "" });
+    try {
+      const serviceId = import.meta.env.VITE_EMAIL_SERVICE;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE;
+      const publicKey = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error("Email service configuration is missing");
+      }
+      console.log({ serviceId, templateId, publicKey, formData });
+      await emailJs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        publicKey,
+      );
+      setSubmitStatus({
+        type: "success",
+        message: "Message is sent successfully! I'll get back to you soon.",
+      });
+    } catch (err) {
+      console.error("Email sending error:", err);
+      setSubmitStatus({
+        type: "error",
+        message: "Failed to send message. Please try again later.",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <section id="contact" className="py-32 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full">
@@ -25,7 +74,7 @@ function Contact() {
         </div>
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           <div className="glass p-8 rounded-3xl border border-primary/30 animate-fade-in animation-delay-300">
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label
                   htmlFor="name"
@@ -38,6 +87,10 @@ function Contact() {
                   type="text"
                   required
                   placeholder="Your name"
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
                   className="w-full px-4 py-3 bg-surface rounded-xl  border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                 />
               </div>
@@ -53,6 +106,10 @@ function Contact() {
                   type="email"
                   required
                   placeholder="your@email.com"
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                   className="w-full px-4 py-3 bg-surface rounded-xl  border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                 />
               </div>
@@ -69,13 +126,38 @@ function Contact() {
                   type="text"
                   required
                   placeholder=" Place Your message..."
+                  value={formData.message}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
                   className="w-full px-4 py-3 bg-surface rounded-xl  border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
                 />
               </div>
-              <Button className="w-full type=submit"  size="lg">
-                Send Message
-                <Send />
+              <Button
+                className="w-full type=submit cursor-pointer"
+                size="lg"
+                disabled={loading}
+              >
+                {loading ? (
+                  "Sending..."
+                ) : (
+                  <>
+                    Send Message
+                    <Send className="h-5 w-5 ml-2 animate-bounce " />
+                  </>
+                )}
               </Button>
+              {submitStatus.type && (
+                <p
+                  className={`mt-4 text-center ${
+                    submitStatus.type === "success"
+                      ? "text-green-500"
+                      : "text-red-500"
+                  }`}
+                >
+                  {submitStatus.message}
+                </p>
+              )}
             </form>
           </div>
         </div>
