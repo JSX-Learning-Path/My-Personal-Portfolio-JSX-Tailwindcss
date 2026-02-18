@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Send } from "lucide-react";
 import Button from "../components/Button";
 import emailJs from "@emailjs/browser";
-import {}
+import contactInfo from "../data/contact";
 function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -159,6 +159,24 @@ function Contact() {
                 </p>
               )}
             </form>
+          </div>
+          <div className="glass rounded-3xl p-8 border-primary/30">
+            <h2 className="text-lg font-semibold">Contact Information</h2>
+            {contactInfo.map((contact, index) => {
+              return (
+                <div key={index} className="flex items-center mt-16 space-x-4 ">
+                  <contact.icon className="h-12 w-12 text-primary p-2  bg-muted rounded" />
+                  <div>
+                    <p className="text-sm font-medium text-gray-500">
+                      {contact.label}
+                    </p>
+                    <a href={contact.href} className="text-sm text-white">
+                      {contact.value}
+                    </a>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

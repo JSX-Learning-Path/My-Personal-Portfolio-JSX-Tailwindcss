@@ -93,20 +93,21 @@ function Hero() {
               ))}
             </div>
           </div>
-        </div>
-        {/*Right Side */}
-        <div className="relative animate-fade-in animation-delay-300 ">
-          {/*Profile Image */}
-          <div className="relative max-w-md  rounded-3xl mt-5 flex items-center justify-center">
-            <div className="glass rounded glow-border p-0.5">
-              <img
-                src={profileImage}
-                alt="Profile Image"
-                className="w-100 h-120 m-2 object-cover  rounded animate-fade-in animation-delay-700 "
-              />
+          <div className="relative animate-fade-in animation-delay-300 ">
+            {/*Profile Image */}
+            <div className="relative max-w-md  rounded-3xl mt-5 flex items-center justify-center">
+              <div className="glass rounded glow-border p-0.5">
+                <img
+                  src={profileImage}
+                  alt="Profile Image"
+                  className="w-100 h-120 m-2 object-cover  rounded animate-fade-in animation-delay-700 "
+                />
+              </div>
             </div>
           </div>
         </div>
+        {/*Right Side */}
+
         {/* Skills */}
         <div className="mt-20 animate-fade-in animation-delay-600">
           <p className=" text-md text-muted-foreground mb-6 text-center">

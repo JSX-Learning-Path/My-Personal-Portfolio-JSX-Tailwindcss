@@ -46,7 +46,11 @@ function Navbar() {
         </div>
         {/*  CTA*/}
         <div className=" hidden md:block">
-          <Button size="sm">Contact Me</Button>
+          <Button size="sm">
+            <a href="#contact" className="w-full h-full">
+              Contact Me
+            </a>
+          </Button>
         </div>
         {/*Mobile Menu BTN*/}
         <button
@@ -54,6 +58,7 @@ function Navbar() {
           onClick={() => setIsMobileMenuOpen((prev) => !prev)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          <a href="#contact"></a>
         </button>
       </nav>
       {isMobileMenuOpen && (
@@ -70,7 +75,11 @@ function Navbar() {
                 </a>
               );
             })}
-            <Button>Contact Me</Button>
+            <Button>
+              <a href="#contact" className="w-full h-full">
+                Contact Me
+              </a>
+            </Button>
           </div>
         </div>
       )}

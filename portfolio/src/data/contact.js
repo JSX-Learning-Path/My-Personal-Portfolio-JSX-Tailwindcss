@@ -1,4 +1,4 @@
-import { Mail, Phone, Location } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const contactInfo = [
   {
@@ -14,7 +14,7 @@ const contactInfo = [
     href: "tel:+359886884507",
   },
   {
-    icon: Location,
+    icon: MapPin,
     label: "Bulgaria",
     value: "Plovdiv",
     href: "#",
