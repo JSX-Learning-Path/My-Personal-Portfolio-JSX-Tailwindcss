@@ -64,7 +64,8 @@ function Hero() {
             {/* Call to Action Buttons */}
             <div className="flex items-center gap-6 animate-fade-in">
               <Button size="lg" className="cursor-pointer">
-                Contact me <ArrowRight className="w-5 h-5" />
+                <a href="#contact">Contact me</a>
+                <ArrowRight className="w-5 h-5 hidden lg:block" />
               </Button>
               <button className="items-center gap-2 flex bg-transparent border border-primary text-primary rounded-full px-6 py-3 text-lg hover:bg-primary/10 transition-colors duration-300 cursor-pointer">
                 Download CV
@@ -115,7 +116,7 @@ function Hero() {
           </p>
           <div className="relative overflow-hidden">
             <div className="flex animation-marquee">
-              {[...skills, ...skills].map((skill, idx) => (
+              {[...skills, ...skills, ...skills].map((skill, idx) => (
                 <div key={idx} className="flex-shrink-0 px-8 py-4">
                   <span className="text-xl font-serif text-muted-foreground/50 hover:text-muted-foreground transition-colors">
                     {skill}

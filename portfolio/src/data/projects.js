@@ -8,7 +8,7 @@ const projects = [
       "A Netflix clone built with HTML, CSS, and JavaScript. Movie browsing, and a responsive design.",
     image: netflix,
     tags: ["HTML", "CSS", "JavaScript"],
-    githubLink: "https://github.com/yourusername/netflix-clone",
+    githubLink: "https://github.com/JS-Learning-Path/Netflix-Clone.git",
   },
   {
     title: "CodeFlow",
