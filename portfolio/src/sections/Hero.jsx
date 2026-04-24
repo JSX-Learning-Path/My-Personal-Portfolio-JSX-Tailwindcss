@@ -70,7 +70,11 @@ function Hero() {
               <button className="items-center gap-2 flex bg-transparent border border-primary text-primary rounded-full px-6 py-3 text-lg hover:bg-primary/10 transition-colors duration-300 cursor-pointer">
                 Download CV
                 <Download className="w-5 h-5" />
-                <a href="./public/CV_Doncho_Ganev.pdf" download className="sr-only">
+                <a
+                  href="/public/CV_Doncho_Ganev.pdf"
+                  download="Doncho_Ganev_CV"
+                  className="sr-only"
+                >
                   Download
                 </a>
               </button>
