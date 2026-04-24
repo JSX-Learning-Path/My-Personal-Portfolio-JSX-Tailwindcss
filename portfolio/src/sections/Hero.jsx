@@ -68,7 +68,7 @@ function Hero() {
                 <ArrowRight className="w-5 h-5 hidden lg:block" />
               </Button>
               <a
-                href="/CV_Doncho_Ganev.pdf" // Ensure the CV file is in the public folder
+                href="/doncho-ganev-cv.pdf" // Ensure the CV file is in the public folder
                 download="Doncho_Ganev_CV.pdf" // Sets the downloaded file name
                 className="items-center gap-2 flex bg-transparent border border-primary text-primary rounded-full px-6 py-3 text-lg hover:bg-primary/10 transition-colors duration-300 cursor-pointer"
               >
