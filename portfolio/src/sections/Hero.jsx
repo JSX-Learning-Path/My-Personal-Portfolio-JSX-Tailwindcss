@@ -70,6 +70,9 @@ function Hero() {
               <button className="items-center gap-2 flex bg-transparent border border-primary text-primary rounded-full px-6 py-3 text-lg hover:bg-primary/10 transition-colors duration-300 cursor-pointer">
                 Download CV
                 <Download className="w-5 h-5" />
+                <a href="./public/CV_Doncho_Ganev.pdf" download className="sr-only">
+                  Download
+                </a>
               </button>
             </div>
             {/*Social Links */}
@@ -94,14 +97,14 @@ function Hero() {
               ))}
             </div>
           </div>
-          <div className="relative animate-fade-in animation-delay-300 ">
+          <div className="relative animate-fade-in animation-delay-300">
             {/*Profile Image */}
             <div className="relative max-w-md  rounded-3xl mt-5 flex items-center justify-center">
               <div className="glass rounded glow-border p-0.5">
                 <img
                   src={profileImage}
                   alt="Profile Image"
-                  className="w-100 h-120 m-2 object-cover  rounded animate-fade-in animation-delay-700 "
+                  className="w-100 h-120 m-2 object-cover rounded animate-fade-in animation-delay-700 sm:mx-"
                 />
               </div>
             </div>
