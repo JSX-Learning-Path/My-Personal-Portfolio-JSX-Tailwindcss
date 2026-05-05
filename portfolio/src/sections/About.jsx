@@ -21,7 +21,7 @@ function About() {
             </h2>
             <div className="text-lg text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I am a dedicated Junior Front-End Developer with hands-on
+                I am a dedicated Front-End Developer with hands-on
                 experience gained through building personal projects and
                 continuous self-learning. I work with HTML, CSS, JavaScript,
                 Tailwind CSS, and React to create responsive, modern, and
