@@ -3,8 +3,6 @@ const skills = [
   "TypeScript",
   "React",
   "Tailwind CSS",
-  "Node.js",
-  "Express",
   "Git",
 ];
 
