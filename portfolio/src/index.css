@@ -98,14 +98,12 @@
       transform: translate(10px, 20px);
     }
   }
+  /* marquee keyframes (ако вече имаш, замени/обедини) */
   @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-40%);
-    }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
   }
+
   .animate-fade-in {
     animation: fade-in 0.9s ease-out both;
   }
@@ -123,5 +121,23 @@
   animation-delay: 300ms;
 }
 .animation-marquee {
-  animation: marquee 30s linear infinite;
+  animation-name: marquee;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 20s; /* desktop / default */
+  will-change: transform;
+}
+
+/* по-бързо на малки екрани */
+@media (max-width: 640px) {
+  .animation-marquee {
+    animation-duration: 9s; /* намали за по-бързо въртене на мобилни */
+  }
+}
+
+/* уважаване на предпочитание за намалено движение */
+@media (prefers-reduced-motion: reduce) {
+  .animation-marquee {
+    animation: none;
+  }
 }
