@@ -131,7 +131,7 @@
 /* по-бързо на малки екрани */
 @media (max-width: 640px) {
   .animation-marquee {
-    animation-duration: 9s; /* намали за по-бързо въртене на мобилни */
+    animation-duration: 5s; /* намали за по-бързо въртене на мобилни */
   }
 }
 
