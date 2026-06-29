@@ -1,5 +1,6 @@
 import netflix from "../assets/netflix.png";
 import codeFlow from "../assets/codeFlow.png";
+import Ecommerce from "../assets/Ecommerce.png";
 
 const projects = [
   {
@@ -21,7 +22,7 @@ const projects = [
   {
     title: "E-Commerce Website",
     description: "A modern E-Commerce Website using React , Bootstrap",
-    image: "e-commerce.png",
+    image: Ecommerce,
     tags: ["JSX", "Bootstrap"],
     githubLink: "https://github.com/JSX-Learning-Path/E-Commerce",
   },
