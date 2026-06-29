@@ -15,7 +15,7 @@ const projects = [
     title: "CodeFlow",
     description: "A modern Website using React , Tailwind CSS",
     image: codeFlow,
-    tags: ["React", "Tailwind CSS"],
+    tags: ["JSX", "Tailwind CSS"],
     githubLink:
       "https://github.com/JSX-Learning-Path/Responsive-Modern-Website-with-React-and-Tailwind-css",
   },
