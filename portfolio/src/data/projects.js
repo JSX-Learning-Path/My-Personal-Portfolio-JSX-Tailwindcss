@@ -18,7 +18,13 @@ const projects = [
     githubLink:
       "https://github.com/JSX-Learning-Path/Responsive-Modern-Website-with-React-and-Tailwind-css",
   },
+  {
+    title: "E-Commerce Website",
+    description: "A modern E-Commerce Website using React , Bootstrap",
+    image: "e-commerce.png",
+    tags: ["JSX", "Bootstrap"],
+    githubLink: "https://github.com/JSX-Learning-Path/E-Commerce",
+  },
 ];
 
 export default projects;
-  
