@@ -122,7 +122,7 @@ function Hero() {
           </p>
           <div className="relative overflow-hidden">
             <div className="flex min-w-max animation-marquee">
-              {[1, 2].map((group) => (
+              {[...skills,...skills,...skills,...skills].map((group) => (
                 <div
                   key={group}
                   className="flex min-w-full shrink-0 justify-end"
