@@ -49,9 +49,6 @@ function Hero() {
               <h1 className="text-5xl font-bold leading-tight md:text-6xl lg:text-7xl text-white glow-text ">
                 Hi, I'm Doncho
               </h1>
-              <div className="relative z-50">
-                <SiReact size={80} color="#61DAFB" />
-              </div>
               <p className="text-lg text-gray-500 animation-delay-300">
                 I'm a passionate Front-end{" "}
                 <span className="text-primary font-semibold glow-text">
