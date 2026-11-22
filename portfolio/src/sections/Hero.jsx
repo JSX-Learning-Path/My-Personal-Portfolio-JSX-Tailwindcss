@@ -31,7 +31,7 @@ function Hero() {
               animationDelay: `${Math.random() * 8}s`,
             }}
           />
-        ))}
+        ))}´
       </div>
       {/* Hero Content */}
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10 ">
@@ -121,7 +121,7 @@ function Hero() {
           </p>
           <div className="relative overflow-hidden">
             <div className="flex animation-marquee">
-              {[...skills, ...skills, ...skills].map((skill, index) => {
+              {[...skills].map((skill, index) => {
                 const Icon = skill.icon;
                 return (
                   <div key={index} className="flex-shrink-0 px-8 py-4">
