@@ -1,6 +1,7 @@
 import netflix from "../assets/netflix.png";
 import codeFlow from "../assets/codeFlow.png";
 import Ecommerce from "../assets/Ecommerce.png";
+import biteSizzle from "../assets/biteSizzle.png";
 
 const projects = [
   {
@@ -25,6 +26,14 @@ const projects = [
     image: Ecommerce,
     tags: ["JSX", "Bootstrap"],
     githubLink: "https://github.com/JSX-Learning-Path/E-Commerce",
+  },
+  {
+    title: "BiteSizzle",
+    description:
+      "A modern food delivery web application built with React and TypeScript.",
+    image: biteSizzle,
+    tags: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+    githubLink: "https://github.com/JSX-Learning-Path/BiteSizzle.git",
   },
 ];
 
