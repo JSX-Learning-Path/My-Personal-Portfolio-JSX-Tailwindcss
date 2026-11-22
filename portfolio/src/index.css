@@ -42,7 +42,6 @@
     backdrop-filter: blur(15px);
     border: 1px solid color-mix(in srgb, var(--color-border) 40%, transparent);
   }
-  
 
   .glass-strong {
     background-color: color-mix(in srgb, var(--color-surface) 70%, transparent);
@@ -100,8 +99,12 @@
   }
 
   @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
 
   .animate-fade-in {
@@ -124,16 +127,15 @@
   animation-name: marquee;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-duration: 20s; 
+  animation-duration: 20s;
   will-change: transform;
 }
 
 @media (max-width: 640px) {
   .animation-marquee {
-    animation-duration: 5s; 
+    animation-duration: 5s;
   }
 }
-
 
 @media (prefers-reduced-motion: reduce) {
   .animation-marquee {

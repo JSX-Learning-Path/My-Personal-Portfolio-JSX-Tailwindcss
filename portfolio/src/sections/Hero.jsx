@@ -31,7 +31,8 @@ function Hero() {
               animationDelay: `${Math.random() * 8}s`,
             }}
           />
-        ))}´
+        ))}
+        ´
       </div>
       {/* Hero Content */}
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10 ">
@@ -120,20 +121,23 @@ function Hero() {
             Technologies I work with
           </p>
           <div className="relative overflow-hidden">
-            <div className="flex animation-marquee">
-              {[...skills].map((skill, index) => {
-                const Icon = skill.icon;
-                return (
-                  <div key={index} className="flex-shrink-0 px-8 py-4">
-                    {/* <span className="text-xl font-serif text-muted-foreground/50 hover:text-muted-foreground transition-colors"> */}
-                    <Icon
-                      className="grayscale hover:grayscale-0 transition-all duration-300"
-                      size={32}
-                    />
-                    {/* </span> */}
-                  </div>
-                );
-              })}
+            <div className="flex w-max animation-marquee">
+              {[1, 2].map((group) => (
+                <div key={group} className="flex shrink-0">
+                  {skills.map((skill, index) => {
+                    const Icon = skill.icon;
+
+                    return (
+                      <div key={index} className="flex-shrink-0 px-8 py-4">
+                        <Icon
+                          className="grayscale hover:grayscale-0 transition-all duration-300"
+                          size={32}
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
+              ))}
             </div>
           </div>
         </div>
