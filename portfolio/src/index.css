@@ -124,6 +124,7 @@
   animation-delay: 300ms;
 }
 .animation-marquee {
+  width: max-content;
   animation-name: marquee;
   animation-timing-function: linear;
   animation-iteration-count: infinite;

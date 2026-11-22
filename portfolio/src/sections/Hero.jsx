@@ -121,9 +121,12 @@ function Hero() {
             Technologies I work with
           </p>
           <div className="relative overflow-hidden">
-            <div className="flex w-max animation-marquee">
+            <div className="flex min-w-max animation-marquee">
               {[1, 2].map((group) => (
-                <div key={group} className="flex shrink-0">
+                <div
+                  key={group}
+                  className="flex min-w-full shrink-0 justify-end"
+                >
                   {skills.map((skill, index) => {
                     const Icon = skill.icon;
 
