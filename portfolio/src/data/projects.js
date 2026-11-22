@@ -32,7 +32,7 @@ const projects = [
     description:
       "A modern food delivery web application built with React and TypeScript.",
     image: biteSizzle,
-    tags: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+    tags: ["React", "TypeScript", "Node.js", "MUI", "PostgreSQL"],
     githubLink: "https://github.com/JSX-Learning-Path/BiteSizzle.git",
   },
 ];
