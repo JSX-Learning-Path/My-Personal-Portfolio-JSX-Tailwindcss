@@ -3,6 +3,7 @@ import Button from "../components/Button";
 import { ArrowRight, Download, Github, Linkedin } from "lucide-react";
 import profileImage from "../assets/profile-picture-1.png";
 import skills from "../data/skills";
+import { SiReact } from "react-icons/si";
 
 function Hero() {
   return (
@@ -48,6 +49,7 @@ function Hero() {
               <h1 className="text-5xl font-bold leading-tight md:text-6xl lg:text-7xl text-white glow-text ">
                 Hi, I'm Doncho
               </h1>
+              <SiReact size={50} color="#61DAFB" />
               <p className="text-lg text-gray-500 animation-delay-300">
                 I'm a passionate Front-end{" "}
                 <span className="text-primary font-semibold glow-text">
