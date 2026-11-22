@@ -3,7 +3,6 @@ import Button from "../components/Button";
 import { ArrowRight, Download, Github, Linkedin } from "lucide-react";
 import profileImage from "../assets/profile-picture-1.png";
 import skills from "../data/skills";
-import { SiReact } from "react-icons/si";
 
 function Hero() {
   return (
@@ -121,26 +120,19 @@ function Hero() {
             Technologies I work with
           </p>
           <div className="relative overflow-hidden">
-            <div className="flex min-w-max animation-marquee">
-              {[...skills,...skills,...skills,...skills].map((group) => (
-                <div
-                  key={group}
-                  className="flex min-w-full shrink-0 justify-end"
-                >
-                  {skills.map((skill, index) => {
-                    const Icon = skill.icon;
+            <div className="flex w-max animation-marquee">
+              {[...skills, ...skills, ...skills, ...skills].map((skill, index) => {
+                const Icon = skill.icon;
 
-                    return (
-                      <div key={index} className="flex-shrink-0 px-8 py-4">
-                        <Icon
-                          className="grayscale hover:grayscale-0 transition-all duration-300"
-                          size={32}
-                        />
-                      </div>
-                    );
-                  })}
-                </div>
-              ))}
+                return (
+                  <div key={index} className="flex-shrink-0 px-8 py-4">
+                    <Icon
+                      className="grayscale hover:grayscale-0 transition-all duration-300"
+                      size={32}
+                    />
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
